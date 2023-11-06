@@ -56,6 +56,9 @@ const Products = () => {
                   <div class="card-body">
                     <h3 class="card-title">{product.title}</h3>
                     <p class="card-text">${product.price}</p>
+                    <button onClick={() => addProduct(product)}>
+                      Ajouter au panier
+                    </button>
                     <NavLink
                       to={`/products${product.id}`}
                       class="btn btn-outline-dark"
