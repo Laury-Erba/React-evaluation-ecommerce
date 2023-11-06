@@ -28,11 +28,21 @@ const Navbar = () => {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Panier
+                  <i class="fa fa-shopping-basket" aria-hidden="true">
+                    {" "}
+                    Panier
+                  </i>
                 </a>
               </li>
               <button class="btn btn-outline-success" type="submit">
-                LOGIN
+                <i class="fa fa-user-plus" aria-hidden="true">
+                  LOGIN
+                </i>
+              </button>
+              <button>
+                <i class="fa fa-toggle-on" aria-hidden="true">
+                  Mode
+                </i>
               </button>
             </ul>
           </div>
