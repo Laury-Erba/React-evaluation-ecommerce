@@ -32,14 +32,21 @@ const Products = () => {
     return (
       <>
         <div className="buttons justify-content-center">
-          <button className="btn-outline-dark">Men's clothing</button>
-          <button className="btn-outline-dark">Autre</button>
+          <button
+            className="btn-outline-dark"
+            onClick={() => FilterProduct("men's clothing")}
+          >
+            Men's clothing
+          </button>
+          <button className="btn-outline-dark" onClick={() => setFilter(data)}>
+            Autre
+          </button>
         </div>
         {Filter.map((product) => {
           return (
             <>
               <div className="col-md-3">
-                <div class="card">
+                <div class="card" key={product.id}>
                   <img
                     src={product.image}
                     class="card-img-top"
@@ -48,8 +55,8 @@ const Products = () => {
                   <div class="card-body">
                     <h3 class="card-title">{product.title}</h3>
                     <p class="card-text">${product.price}</p>
-                    <a href="#" class="btn btn-primary">
-                      Go somewhere
+                    <a href="#" class="btn btn-outline-dark">
+                      Acheter
                     </a>
                   </div>
                 </div>

@@ -1,13 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <NavLink class="navbar-brand" to="/">
             Eshop
-          </a>
+          </NavLink>
           <button
             class="navbar-toggler"
             type="button"
@@ -22,17 +23,17 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <NavLink class="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <NavLink class="nav-link" to="/">
                   <i class="fa fa-shopping-basket" aria-hidden="true">
                     {" "}
                     Panier
                   </i>
-                </a>
+                </NavLink>
               </li>
               <button class="btn btn-outline-success" type="submit">
                 <i class="fa fa-user-plus" aria-hidden="true">
