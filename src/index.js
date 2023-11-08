@@ -5,8 +5,8 @@ import App from "./App.jsx";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import { BrowserRouter } from "react-router-dom";
+import store from "./redux/store";
 import { Provider } from "react-redux";
-import Store from ".redux/store";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,5 +14,5 @@ ReactDOM.render(
       <App />
     </Provider>
   </BrowserRouter>,
-  document.getElementById("root") // L'élément HTML où votre application sera rendue
+  document.getElementById("root")
 );
