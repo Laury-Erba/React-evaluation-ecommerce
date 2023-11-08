@@ -33,7 +33,7 @@ const Navbar = () => {
                 <NavLink class="nav-link" to="/">
                   <i class="fa fa-shopping-basket" aria-hidden="true">
                     {" "}
-                    Panier ({state.length})
+                    {/* Panier ({state.length}) */}
                   </i>
                 </NavLink>
               </li>
