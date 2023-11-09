@@ -8,6 +8,7 @@ import Products from "./component/Products";
 import Cart from "./component/Cart";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import store from "./redux/store.js";
+import Login from "./component/Login.jsx";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/Cart" component={<Cart />} />
+            <Route path="/cart" component={<Cart />} />
+            <Route path="/login" component={<Login />} />
           </Routes>
         </Router>
       </Provider>

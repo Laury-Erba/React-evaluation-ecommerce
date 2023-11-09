@@ -30,18 +30,20 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li class="nav-item">
-                <NavLink class="nav-link" to="/">
+                <NavLink class="nav-link" to="/cart">
                   <i class="fa fa-shopping-basket" aria-hidden="true">
                     {" "}
                     {/* Panier ({state.length}) */}
                   </i>
                 </NavLink>
               </li>
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fa fa-user-plus" aria-hidden="true">
-                  LOGIN
-                </i>
-              </button>
+              <li>
+                <NavLink class="nav-link" to="/login">
+                  <i class="fa fa-user-plus" aria-hidden="true">
+                    LOGIN
+                  </i>
+                </NavLink>
+              </li>
               <button>
                 <i class="fa fa-toggle-on" aria-hidden="true">
                   Mode
