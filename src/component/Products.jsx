@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addCart } from "../redux/action";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -45,30 +47,31 @@ const Products = () => {
         </div>
         {Filter.map((product) => {
           return (
-            <>
-              <div className="col-md-3">
-                <div class="card" key={product.id}>
+            <div key={product.id}>
+              <div className="card" >
+                <div className="col-md-3">
                   <img
                     src={product.image}
-                    class="card-img-top"
+                    className="card-img-top"
                     alt={product.title}
                   />
-                  <div class="card-body">
-                    <h3 class="card-title">{product.title}</h3>
-                    <p class="card-text">${product.price}</p>
+                  <div className="card-body">
+                    <h3 className="card-title">{product.title}</h3>
+                    <p className="card-text">${product.price}</p>
                     <button onClick={() => addProduct(product)}>
                       Ajouter au panier
                     </button>
+                    <p>Quantité</p>
                     <NavLink
                       to={`/products${product.id}`}
-                      class="btn btn-outline-dark"
+                      className="btn btn-outline-dark"
                     >
                       Acheter
                     </NavLink>
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
         ;
