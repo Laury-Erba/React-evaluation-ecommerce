@@ -5,7 +5,6 @@ import { addItem } from "../redux/action/index";
 import { useSelector } from "react-redux";
 
 const Products = () => {
-
   const dispatch = useDispatch();
   const items = useSelector((state) => state.reducer.items);
 
@@ -20,9 +19,7 @@ const Products = () => {
     };
 
     getProducts();
-
   }, []);
-
 
   const ProductsView = () => {
     return (
@@ -30,7 +27,7 @@ const Products = () => {
         {items?.map((product) => {
           return (
             <div key={product.id}>
-              <div className="card" >
+              <div className="card">
                 <div className="col-md-3">
                   <img
                     src={product.image}

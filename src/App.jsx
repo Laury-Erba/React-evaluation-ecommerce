@@ -1,4 +1,4 @@
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 import Navbar from "./component/Navbar";
 import Home from "./component/Home.jsx";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
