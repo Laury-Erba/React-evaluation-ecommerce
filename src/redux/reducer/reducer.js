@@ -4,6 +4,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
+  const product = action.payload;
   switch (action.type) {
     case "UPLOADITEMS":
       return {
@@ -12,7 +13,6 @@ const reducer = (state = initialState, action) => {
       };
 
     case "ADDITEM":
-      const product = action.payload;
 
       console.log(state.cart);
 
