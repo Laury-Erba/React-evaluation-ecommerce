@@ -1,19 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-//import { deleteItem } from "../redux/action/index";
-import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteItem } from "../redux/action/index";
+// import { NavLink } from "react-router-dom";
 import CartComponents from "./CartComponents";
 
-const Cart = () => {
-  const state = useSelector((state) => state.addItem);
+const CartPage = () => {
+  const cart = useSelector((state) => state.reducer.cart);
+  console.log(cart);
   const dispatch = useDispatch();
 
   const handleClose = (item) => {
-    dispatch(delItem(item));
+    dispatch(deleteItem(item));
   };
+
+
 return (
-  <CartComponents />
+  <CartComponents
+    cart={cart}
+  />
 )
 
   // const emptyCart = () => {
@@ -52,4 +56,4 @@ return (
   // );
 };
 
-export default Cart;
+export default CartPage;
