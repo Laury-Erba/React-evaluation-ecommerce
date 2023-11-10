@@ -14,3 +14,11 @@ export const deleteItem = (product) => {
     payload: product,
   };
 };
+
+// mise à jour des info utilisateurs
+export const submitUser = (form) => {
+  return {
+    type: "SUBMITUSER",
+    payload: form,
+  };
+};

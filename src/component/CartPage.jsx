@@ -4,7 +4,7 @@ import { deleteItem } from "../redux/action/index";
 import CartComponents from "./CartComponents";
 
 const CartPage = () => {
-  const cart = useSelector((state) => state.reducer.cart);
+  const cart = useSelector((state) => state.itemReducer.cart);
   console.log(cart);
   const dispatch = useDispatch();
 
@@ -12,7 +12,11 @@ const CartPage = () => {
     dispatch(deleteItem(item));
   };
 
-  return <CartComponents cart={cart} handleDelete={handleDelete} />;
+  return cart.length !== 0 ? (
+    <CartComponents cart={cart} handleDelete={handleDelete} />
+  ) : (
+    <p>Cart is empty</p>
+  );
 };
 
 export default CartPage;

@@ -1,7 +1,8 @@
 import React from "react";
 
 function CartComponents({ cart, handleDelete }) {
-  return cart.map((cartItem) => {
+  
+  return cart?.map((cartItem) => {
     return (
       <div className="px-4 my-5 bg-light rounded-3" key={cartItem.id}>
         <div className="container py-4">

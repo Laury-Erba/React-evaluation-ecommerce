@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const Products = () => {
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.reducer.items);
+  const items = useSelector((state) => state.itemReducer.items);
 
   useEffect(() => {
     const getProducts = async () => {

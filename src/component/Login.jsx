@@ -1,6 +1,19 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { submitUser } from "../redux/action";
 
 const Login = () => {
+  const username = useSelector((state) => state.userReducer.name)
+  const usermail = useSelector((state) => state.userReducer.email)
+  const dispatch = useDispatch()
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target.firstName.value)
+    console.log(e.target.email.value)
+    const name = e.target.firstName.value
+    const email = e.target.email.value
+    dispatch(submitUser({name, email}))
+  }
   return (
     <>
       {/* <!-- Modal --> */}
@@ -8,19 +21,21 @@ const Login = () => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLabel">
-              {/* Hi {loginName} */}
+              Hi {username}
             </h5>
           </div>
           <div className="modal-body">
-            <form>
+            <form onSubmit={(e) => handleSubmit(e)}>
               <div className="mb-3">
                 <label htmlFor="exampleInputFname" className="form-label">
                   First Name
                 </label>
                 <input
                   type="text"
+                  name="firstName"
                   className="form-control"
                   id="exampleInputFname"
+                  defaultValue={username}
                 />
               </div>
               <div className="mb-3">
@@ -29,14 +44,16 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   className="form-control"
                   id="exampleInputEmail1"
+                  defaultValue={usermail}
                 />
               </div>
 
               {/* <!-- Button trigger modal --> */}
               <button
-                type="button"
+                type="submit"
                 className="btn btn-outline-primary ms-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#loginModal"

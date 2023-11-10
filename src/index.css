@@ -1,0 +1,112 @@
+/* généralité */
+
+button {
+  background-color: #eab024;
+  color: black;
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+}
+button:hover {
+  background-color: black;
+  color: #eab024;
+}
+
+.btn {
+  background-color: #eab024;
+  color: black;
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+}
+.btn:hover {
+  background-color: black;
+  color: #eab024;
+}
+
+/* fin des généralités */
+
+.navbar {
+  background-color: #eab024 !important;
+  display: flex;
+  padding: 10px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  color: black;
+}
+
+.navbar ul {
+  width: 100%;
+  text-align: right;
+  list-style: none;
+  margin: 40px;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 5px 35px;
+}
+
+.navbar-brand {
+  font-size: 45px;
+}
+
+.fa-toggle-on {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-flex img {
+  width: 30%;
+}
+.card-body {
+  width: 50%;
+  margin-left: 15px;
+}
+.card {
+  border: none;
+}
+.card-text {
+  font-weight: bolder;
+}
+.btn-panier {
+  background-color: #eab024;
+  padding: 10px;
+  color: black;
+  border: none;
+}
+
+.btn-panier:hover {
+  background-color: black;
+  color: #eab024;
+}
+
+.card-text {
+  font-size: 25px;
+}
+
+form {
+  width: 600px;
+  margin-top: 50px;
+  padding-left: 45px;
+}
+
+form .btn {
+  background-color: #eab024;
+  color: black;
+  border: none;
+}
+
+form .btn:hover {
+  color: #eab024;
+  background-color: black;
+}

@@ -3,7 +3,7 @@ const initialState = {
   cart: [],
 };
 
-const reducer = (state = initialState, action) => {
+const itemReducer = (state = initialState, action) => {
   const product = action.payload;
   switch (action.type) {
     case "UPLOADITEMS":
@@ -38,15 +38,9 @@ const reducer = (state = initialState, action) => {
       }
 
     case "DELETEITEM":
-      const item = state.cart.find((cartItem) => cartItem.id === product.id);
-      if (item.qty === 1) {
-        return state.cart.filter((cartItem) => cartItem.id !== item.id);
-      } else {
-        return state.cart.map((cartItem) =>
-          cartItem.id === product.id
-            ? { ...cartItem, qty: cartItem.qty - 1 }
-            : cartItem
-        );
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== product.id)
       }
 
     default:
@@ -54,4 +48,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default itemReducer;

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const cart = useSelector((state) => state.reducer.cart);
+  const cart = useSelector((state) => state.itemReducer.cart);
 
   return (
     <div>
