@@ -28,25 +28,19 @@ const Products = () => {
           return (
             <div key={product.id}>
               <div className="card">
-                <div className="col-md-3">
+                <div className="col-md-6 card-flex">
                   <img
                     src={product.image}
                     className="card-img-top"
                     alt={product.title}
-                  />
+                    />
                   <div className="card-body">
                     <h3 className="card-title">{product.title}</h3>
+                    <p>{product.description}</p>
                     <p className="card-text">${product.price}</p>
                     <button onClick={() => dispatch(addItem(product))}>
                       Ajouter au panier
                     </button>
-                    <p>Quantité</p>
-                    <NavLink
-                      to={`/products${product.id}`}
-                      className="btn btn-outline-dark"
-                    >
-                      Acheter
-                    </NavLink>
                   </div>
                 </div>
               </div>
